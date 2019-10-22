@@ -1,7 +1,16 @@
+@font-face {
+	font-family: 'Open-Sans';
+	src: url(
+		../fonts/OpenSans-Regular.ttf
+	);
+	font-size: 1em;
+}
+
+
 header {
 	width: 100%;
 	height: 150px;
-	background-color: #5C2D90;
+	background-color: #6B3CA1;
 	
 }
 
@@ -20,7 +29,7 @@ header .header-black li {
 	background-image: url("../../img/clubs.png");
 	background-repeat: no-repeat;
 	display: inline-block;
-	margin: 4px 8px;
+	margin: 4px 4px;
 }
 
 header .header-black li.club-01 {
@@ -99,4 +108,44 @@ header .header-black li a {
 header #logotipo {
 	position: absolute;
 	top: -20px;
+}
+
+#menu {
+	margin: 14px;
+}
+
+#menu li{
+	display: inline-block;
+	font-family: 'Open-Sans';
+}
+
+#menu li .search {
+	width: 182px;	
+}
+
+#menu .search input  {
+	background-color: #5C2D90;
+	color: #FFF;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+}
+
+#menu .search button {
+	background: none;
+	border: none;
+
+}
+#menu .search button i {
+	color: rgba(255, 255, 255, .5);
+	font-size: 14px;
+	position: absolute;
+    right: 30px;
+    top: 9px;
+}
+
+#menu li a {
+	color: #FFF;
+	font-size: 16px;
+	padding: 10px 25px;
 }
