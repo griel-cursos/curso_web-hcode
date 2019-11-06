@@ -93,105 +93,44 @@
         </header>
         
         <section>
-            <div id="banner">
-                <h1>Orlando City<small>Clube de Futebol Orlando City</small></h1>
-            </div>
 
-            <div id="news" class="container">
-                <div class="row">
-                    <h2 class="text-center">Últimas Notícias</h2>
+        <div id="video">
+            <div class="container">
+                <div class="row text-center text-title">
+                    <h2>Vídeos</h2><br>
                     <hr>
                 </div>
+                <div class="row">
+                    <div class="video-player">
+                        <video src="mp4/highlights.mp4" autoplay controls poster="img/highlights.jpg"></video>
+                    </div>
 
-                <div class="row thumbnails owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="item-inner">
-                            <img src="img/noticia-thumb.jpg" alt="Notícias">
-                            <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                            <time>21 de Dezembro de 2019</time>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-inner">
-                            <img src="img/noticia-thumb.jpg" alt="Notícias">
-                            <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                            <time>21 de Dezembro de 2019</time>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-inner">
-                            <img src="img/noticia-thumb.jpg" alt="Notícias">
-                            <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                            <time>21 de Dezembro de 2019</time>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-inner">
-                            <img src="img/noticia-thumb.jpg" alt="Notícias">
-                            <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                            <time>21 de Dezembro de 2019</time>
-                        </div>
-                    </div>
-                    <div class="item">
+                    <!-- <div class="audio-player">
+                        <audio src="mp3/audio.mp3" controls></audio>
+                    </div> -->
+                </div>
+            </div>
+
+            <div id="video-carousel" class="container">
+    
+                    <div class="row thumbnails owl-carousel owl-theme">
+                        <div class="item" data-video="highlights">
                             <div class="item-inner">
-                                <img src="img/noticia-thumb.jpg" alt="Notícias">
-                                <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                                <time>21 de Dezembro de 2019</time>
+                                <img src="img/highlights.jpg" alt="Notícias">
+                                <h3>Melhores Momentos</h3>
+                                </div>
+                        </div>
+                        <div class="item" data-video="Orlando_City_Foundation_2015">
+                            <div class="item-inner">
+                                <img src="img/Orlando_City_Foundation_2015.jpg" alt="Notícias">
+                                <h3>Fundação do Time em 2015</h3>
                             </div>
                         </div>
-                    <div class="item">
-                        <div class="item-inner">
-                            <img src="img/noticia-thumb.jpg" alt="Notícias">
-                            <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                            <time>21 de Dezembro de 2019</time>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-inner">
-                            <img src="img/noticia-thumb.jpg" alt="Notícias">
-                            <h3>Orlando City adquire o goleiro Joe Bendik do Toronto FC</h3>
-                            <time>21 de Dezembro de 2019</time>
-                        </div>
+                        
                     </div>
                 </div>
-            </div>
+        </div>
 
-            <div id="estatisticas">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p>61384<small>Capacidade do Estádio</small></p>
-                        </div>
-                        <div class="col-md-4">
-                            <p>2010<small>Fundação</small></p>
-                        </div>
-                        <div class="col-md-4">
-                            <p>7º<small>Conferência Leste</small></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="call-to-action">
-                <div class="container">
-                    <div class="row text-center">
-                        <h2>O clube Americano número 1 no Brasil</h2>
-                        <hr>
-                    </div>
-                    <div class="row">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed est eu lectus hendrerit iaculis. Integer pulvinar nisi a augue sollicitudin consectetur. Etiam interdum auctor nisl, ut mollis ipsum. Nunc eu neque interdum, cursus lorem mollis, pharetra tellus. Etiam nec aliquet libero. Maecenas quis mauris a mi fringilla rutrum. Aliquam blandit placerat cursus. Nullam id erat eu massa posuere eleifend id at libero.</p>
-                    </div>
-                    <div class="row row-max-400">
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-roxo">Loja</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-amarelo">Cadastre-se</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         
         <footer>
@@ -292,6 +231,17 @@
         <script src="lib/owl-carousel2/owl.carousel.min.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="lib/js/efeitos.js"></script>
+        <script>
+            $(function(){
+                $(".thumbnails .item").on("click", function(){
+                    console.log($(this).data('video'));
+                    $("video").attr({
+                        "src":"mp4/"+$(this).data('video')+".mp4",
+                        "poster":"img/"+$(this).data('video')+".jpg"
+                        });
+                });
+            })
+        </script>
         
     </body>
 </html>

@@ -241,6 +241,14 @@ header #logotipo {
 	font-family: 'Open-Sans';
 }
 
+#news .thumbnails .item-inner {
+	padding: 10px;
+}
+
+#news .thumbnails .item-inner img {
+	width: 100%;
+}
+
 #estatisticas {
 	background-color: #5E299A;
 	width: 100%;
@@ -424,4 +432,89 @@ footer .list-socials a {
 footer .list-socials i {
 	font-size: 16px;
 	margin: 7px auto;
+}
+
+#video {
+	text-align: center;
+	margin-top: 105px;
+}
+
+#video h2 {
+    color: #5e2799;
+    font-family: 'Open-Sans-Light';
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-left: 45%;
+	position: relative;
+	text-align: center;
+}
+
+#video hr {
+    border: solid #fde192;
+    width: 200px;
+    margin: 0 auto;
+    margin-left: -16%;
+    margin-top: 70px;
+}
+
+#video .text-title {
+    margin-bottom: 100px;
+}
+
+.video-player {
+    position: relative;
+    margin-left: 25%;
+}
+
+.audio-player {
+    position: relative;
+    margin-left: 25%;
+}
+
+
+#video-carousel h2 {
+	color: #5e2799;
+	font-family: 'Open-Sans-Light';
+	font-size: 48px;
+	text-transform: uppercase;
+	margin-left: 30%;
+	position: relative;
+}
+
+#video-carousel hr {
+	border: solid #fde192;
+	width: 200px;
+	margin: 0 auto;
+	margin-left: 40%;
+}
+
+#video-carousel .thumbnails {
+	margin-top: 20px;
+}
+
+#video-carousel .thumbnails h3 {
+	color: #5E299A;
+	font-size: 18px;
+	font-family: 'Open-Sans';
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+#video-carousel .thumbnails time {
+	color: #A7A7A7;
+	font-size: 15px;
+	font-family: 'Open-Sans';
+}
+
+#video-carousel .thumbnails .item-inner {
+	padding: 10px;
+}
+
+#video-carousel .thumbnails .item-inner img {
+	width: 100%;
+}
+
+video {
+	width: 60%;
+	margin: 0 auto;
 }
